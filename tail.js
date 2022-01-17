@@ -6,19 +6,21 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
 const tail = function(arr) {
   let tailA = [];
   if (arr.length > 0) {
     tailA = arr.slice(1);
+    return tailA;
   } else {
     return tailA;
   }
-  return tailA;
 };
 
-
-const result = tail(["Hello", "Lighthouse", "Labs"]);
+let tailArr = ["Hello", "Lighthouse", "Labs"];
+const result = tail(tailArr);
 
 console.log(assertEqual(result.length, 2)); // ensure we get back two elements
 console.log(assertEqual(result[0], "Lighthouse")); // ensure first element is "Lighthouse"
 console.log(assertEqual(result[1], "Labs")); // ensure second element is "Labs"
+console.log(assertEqual(tailArr.length, 3)); // ensure the original array is not modified
