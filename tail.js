@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
 const tail = function(arr) {
   let tailA = [];
   if (arr.length > 0) {
-    tailA = arr.splice(1);
+    tailA = arr.slice(1);
   } else {
     return tailA;
   }
