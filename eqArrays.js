@@ -12,7 +12,7 @@ const assertEqual = function(actual, expected) {
 const eqArrays = function (arr1, arr2){
 
   for(let num1 of arr1){
-    for(num2 of arr2) {
+    for(let num2 of arr2) {
       if(num1 === num2){
         return true;
       }
